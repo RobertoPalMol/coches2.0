@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/cochesId"
+        android:id="@+id/idCoche"
         android:layout_width="385dp"
         android:layout_height="31dp"
         android:layout_marginTop="348dp"
@@ -23,12 +23,12 @@
         android:layout_marginBottom="224dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/precioId"
+        app:layout_constraintEnd_toEndOf="@+id/precioCoche"
         app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toStartOf="@+id/precioId" />
+        app:layout_constraintStart_toStartOf="@+id/precioCoche" />
 
     <TextView
-        android:id="@+id/precioId"
+        android:id="@+id/precioCoche"
         android:layout_width="379dp"
         android:layout_height="46dp"
         android:layout_marginTop="380dp"

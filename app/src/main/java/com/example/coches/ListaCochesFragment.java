@@ -74,7 +74,6 @@ public class ListaCochesFragment extends Fragment {
 
         executor.execute(() -> {
             cochesApi api = new cochesApi();
-            Log.d("tanga", "marikita de playa");
             ArrayList<Coche> list = api.getCoches();
 
             Log.d("tanga", list.toString());
