@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.coches.databinding.FragmentFirstBinding;
 
@@ -53,6 +54,8 @@ public class FirstFragment extends Fragment {
             public void onClick(View v) {
                 // Maneja el clic del botón "Coches disponibles"
                 showCochesDisponiblesFragment();
+
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_ListaCoches);
             }
         });
     }

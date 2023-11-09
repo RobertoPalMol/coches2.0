@@ -12,7 +12,7 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/lista_coches" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -21,7 +21,7 @@
         tools:layout="@layout/fragment_second">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_FirstFragment_to_ListaCoches"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
