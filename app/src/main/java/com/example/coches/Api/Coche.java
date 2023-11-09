@@ -71,7 +71,7 @@ public class Coche implements Serializable {
 
     @Override
     public String toString() {
-        return "Coche: #" + id + ": " + Coche + " - Tienda: " + tienda + ", Precio: " + precio + ", Velocidad: " + velocidad + " km/h";
+        return "Coche: #" + id + ": " + Coche + " - Tienda: " + tienda + ", Precio: " + precio + ", Velocidad: " + velocidad + " km/h" + imagen;
     }
 }
 

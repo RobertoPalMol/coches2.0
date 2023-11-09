@@ -27,6 +27,9 @@ public class CocheAdapter extends ArrayAdapter<Coche> {
 
     @SuppressLint("SetTextI18n")
     public View getView(int position, View convertView, ViewGroup parent) {
+
+
+        //CODIGO BASURA (NO BORRADO PORSIACASO HASTA FINALIZAR PROYECTO)
         /*
         Coche coche=getItem(position);
         if (convertView == null) {
@@ -68,14 +71,11 @@ public class CocheAdapter extends ArrayAdapter<Coche> {
             convertView.setTag(binding);
         } else {
             binding = (CochesRowBinding) convertView.getTag();
-        }  //
+        }
 
 
         binding.idCoche.setText(coches.getCoche());
         binding.precioCoche.setText("Precio: "+coches.getPrecio());
-        // binding.PersonajesNombre.setText(personajes.getNombrePersonaje());
-        // Picasso.get().load(personajes.getUrlImagenPersonaje()).into(binding.imgPersonajes);
-
 
 
 

@@ -49,8 +49,6 @@ public class FirstFragment extends Fragment {
         cochesList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 // Maneja el clic del botón "Coches disponibles"
                 //Te lleva a la lista de coches
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_lista_coches);

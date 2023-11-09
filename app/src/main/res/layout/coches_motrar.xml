@@ -7,52 +7,52 @@
 
     <TextView
         android:id="@+id/cochesId"
-        android:layout_width="181dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="385dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="348dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintHorizontal_bias="0.673"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tiendaId"
-        android:layout_width="141dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="572dp"
+        android:layout_width="372dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="224dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/precioId"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="@+id/precioId" />
 
     <TextView
         android:id="@+id/precioId"
-        android:layout_width="144dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="76dp"
+        android:layout_width="379dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imagenCoche" />
 
     <TextView
         android:id="@+id/velocidadId"
-        android:layout_width="142dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="369dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/tiendaId"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/tiendaId"
         app:layout_constraintTop_toBottomOf="@+id/tiendaId" />
 
     <ImageView
         android:id="@+id/imagenCoche"
-        android:layout_width="151dp"
-        android:layout_height="157dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="379dp"
+        android:layout_height="318dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
