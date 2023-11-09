@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.coches.Api.Coche;
 import com.example.coches.Api.CocheAdapter;
@@ -32,7 +33,7 @@ public class ListaCochesFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = ListaCochesBinding.inflate(inflater, container, false); // Carrega la definició de la interficie
+        binding = ListaCochesBinding.inflate(inflater, container, false); // Carga la definición de la interficie
         return binding.getRoot();
 
     }
@@ -41,14 +42,29 @@ public class ListaCochesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         adapter = new CocheAdapter(
-                getContext(), // Context de l'Activity
-                R.layout.coches_row, // Layout per a cadascun dels ítems del ListView
+                getContext(), // Contexto de l'Activity
+                R.layout.coches_row, // Layout per a cadauno de los ítems del ListView
                 new ArrayList<Coche>()
                 //carles guapo
         );
         binding.listaID.setAdapter(adapter);
         actualizar();
+
+       //Pulsar para ir al coche
+        binding.listaID.setOnItemClickListener((adapterView, view1, i, l) -> {
+
+            Coche coche = (Coche) adapterView.getItemAtPosition(i);
+
+
+            Bundle datos = new Bundle();
+            datos.putSerializable("Coche", coche);
+
+
+            NavHostFragment.findNavController(this).navigate(R.id.action_lista_coches_to_cochesMostrar, datos);
+        });
+
     }
+
 
    //Alex me ha ayudado hoy a las 18:26
     public void actualizar() {

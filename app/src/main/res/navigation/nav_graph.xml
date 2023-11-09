@@ -23,5 +23,19 @@
         <action
             android:id="@+id/lista_coches_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_lista_coches_to_cochesMostrar"
+            app:destination="@id/cochesMostrar" />
+
     </fragment>
+    <fragment
+        android:id="@+id/cochesMostrar"
+        android:name="com.example.coches.SecondFragment"
+        tools:layout="@layout/coches_motrar">
+
+        <action
+            android:id="@+id/action_cochesRow_to_lista_coches"
+            app:destination="@id/lista_coches" />
+    </fragment>
+
 </navigation>
