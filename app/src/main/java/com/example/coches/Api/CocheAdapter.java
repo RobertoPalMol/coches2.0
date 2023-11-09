@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.example.coches.R;
+import com.example.coches.databinding.CochesRowBinding;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -25,7 +26,8 @@ public class CocheAdapter extends ArrayAdapter<Coche> {
     }
 
     @SuppressLint("SetTextI18n")
-    public View getView(int position, View convertView, ViewGroup parent){
+    public View getView(int position, View convertView, ViewGroup parent) {
+        /*
         Coche coche=getItem(position);
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
@@ -40,7 +42,8 @@ public class CocheAdapter extends ArrayAdapter<Coche> {
 
         //ImageView (En honor a Ramon)
 
-        idCoche.setText("Modelo: "+coche.getId());
+        Log.d("tallarines", Coche.toString());
+        /*idCoche.setText(Coche.getId());
         tiendaCoche.setText("Tienda de venta: "+coche.getTienda());
         precioCoche.setText("Precio: "+coche.getPrecio());
         velocidadCoche.setText("Velocidad maxima (km/h): "+coche.getVelocidad());
@@ -49,8 +52,38 @@ public class CocheAdapter extends ArrayAdapter<Coche> {
         Log.i("El id es"+coche.getId(),"El id es"+coche.getId());
 
         return convertView;
+        }
+         */
+
+
+
+
+
+        Coche coches = getItem(position);
+        CochesRowBinding binding = null;
+        if (convertView == null) {
+            LayoutInflater inflater = LayoutInflater.from(getContext());
+            binding = CochesRowBinding.inflate(inflater, parent, false);
+            convertView = binding.getRoot();
+            convertView.setTag(binding);
+        } else {
+            binding = (CochesRowBinding) convertView.getTag();
+        }  //
+
+
+        binding.idCoche.setText(coches.getCoche());
+        binding.precioCoche.setText("Precio: "+coches.getPrecio());
+        // binding.PersonajesNombre.setText(personajes.getNombrePersonaje());
+        // Picasso.get().load(personajes.getUrlImagenPersonaje()).into(binding.imgPersonajes);
+
+
+
+
+        return convertView;
 
     }
+
+
 
 
 }

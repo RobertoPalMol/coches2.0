@@ -3,6 +3,7 @@ package com.example.coches;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
-//esta clase tiene complejo de terrorista, explota la aplicacion, arreglar si o si
+//esta clase explota la aplicacion, arreglar si o si
 public class ListaCochesFragment extends Fragment {
 
     private ListaCochesBinding binding;
@@ -51,13 +52,16 @@ public class ListaCochesFragment extends Fragment {
 
    //Alex me ha ayudado hoy a las 18:26
     public void actualizar() {
+        Log.d("tanga", "Ha entrado");
         ExecutorService executor = Executors.newSingleThreadExecutor();
         Handler handler = new Handler(Looper.myLooper());
 
         executor.execute(() -> {
             cochesApi api = new cochesApi();
+            Log.d("tanga", "marikita de playa");
             ArrayList<Coche> list = api.getCoches();
 
+            Log.d("tanga", list.toString());
             handler.post(() -> {
                 adapter.clear();
                 if (list != null) {
