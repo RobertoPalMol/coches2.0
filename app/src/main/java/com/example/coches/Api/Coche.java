@@ -1,6 +1,9 @@
 package com.example.coches.Api;
 
-public class Coche {
+import java.io.Serializable;
+
+public class Coche implements Serializable {
+
     private int id;
     private String Coche;
     private String tienda;
@@ -8,9 +11,6 @@ public class Coche {
     private int velocidad;
     private String imagen;
 
-    public Coche(){
-
-    }
 
     public int getId() {
         return id;
@@ -60,7 +60,7 @@ public class Coche {
         this.imagen = imagen;
     }
 
-    public Coche(int id, String Coche, String tienda, String precio, int velocidad, String imagen) {
+    public Coche() {
         this.id = id;
         this.Coche = Coche;
         this.tienda = tienda;

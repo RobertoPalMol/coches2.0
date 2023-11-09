@@ -38,7 +38,7 @@ public class cocheAdapter extends ArrayAdapter<Coche> {
         TextView velocidadCoche=convertView.findViewById(R.id.velocidadId);
         ImageView imagenCoche=convertView.findViewById(R.id.imagenCoche);
 
-
+        //ImageView (En honor a Ramon)
 
         idCoche.setText("Modelo: "+coche.getId());
         tiendaCoche.setText("Tienda de venta: "+coche.getTienda());

@@ -8,9 +8,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class cochesApi {
-    private String BASE_URL = "https://ltxbhwabgxtxbbvqlkte.supabase.co/rest/v1";
+    private final String BASE_URL = "https://ltxbhwabgxtxbbvqlkte.supabase.co/rest/v1";
 
-    ArrayList<Coche> getCoches() {
+    public ArrayList<Coche> getCoches() {
         Uri builtUri = Uri.parse(BASE_URL)
                 .buildUpon()
                 .appendPath("Deportivos")
@@ -38,14 +38,17 @@ public class cochesApi {
 
             JSONArray jsonArray=new JSONArray(Jresponse);
             for(int i=0;i<jsonArray.length();i++){
-                Coche coche=new Coche();
+
                 JSONObject cocheJson=jsonArray.getJSONObject(i);
+
+                Coche coche=new Coche();
                 coche.setId(cocheJson.getInt("id"));
                 coche.setCoche(cocheJson.getString("Coche"));
                 coche.setTienda(cocheJson.getString("Tienda"));
                 coche.setPrecio(cocheJson.getString("Precio"));
                 coche.setVelocidad(cocheJson.getInt("Velocidad (km/h)"));
                 coche.setImagen(cocheJson.getString("Imagen"));
+
                 listaCoche.add(coche);
 
             }
