@@ -17,10 +17,10 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class cocheAdapter extends ArrayAdapter<Coche> {
+public class CocheAdapter extends ArrayAdapter<Coche> {
 
 
-    public cocheAdapter(@NonNull Context context, int resource, List<Coche> coches) {
+    public CocheAdapter(@NonNull Context context, int resource, List<Coche> coches) {
         super(context, resource, coches);
     }
 

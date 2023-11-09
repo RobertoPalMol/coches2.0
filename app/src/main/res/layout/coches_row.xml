@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/cochesId"
+        android:id="@+id/idCoche"
         android:layout_width="181dp"
         android:layout_height="37dp"
         android:layout_marginTop="16dp"
@@ -16,13 +16,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/precioId"
+        android:id="@+id/precioCoche"
         android:layout_width="144dp"
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.357"
-        app:layout_constraintStart_toEndOf="@+id/cochesId"
+        app:layout_constraintStart_toEndOf="@+id/idCoche"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

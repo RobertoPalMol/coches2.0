@@ -40,10 +40,7 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String searchTerm = textoBuscar.getText().toString();
-                // Aquí puedes realizar la acción de búsqueda con el término ingresado
-                // Por ejemplo, puedes iniciar una nueva actividad o cargar otro fragmento con los resultados de búsqueda.
-                // También puedes implementar la lógica de búsqueda directamente aquí.
-                // Ejemplo básico:
+                // No funciona
                 Toast.makeText(getActivity(), "Buscando: " + searchTerm, Toast.LENGTH_SHORT).show();
 
             }
