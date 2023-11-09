@@ -40,7 +40,7 @@ public class ListaCochesFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        Log.d("tanga", "viewCreated");
         adapter = new CocheAdapter(
                 getContext(), // Contexto de l'Activity
                 R.layout.coches_row, // Layout per a cadauno de los ítems del ListView
@@ -59,7 +59,7 @@ public class ListaCochesFragment extends Fragment {
             Bundle datos = new Bundle();
             datos.putSerializable("Coche", coche);
 
-
+            Log.d("tanga", "envia?");
             NavHostFragment.findNavController(this).navigate(R.id.action_lista_coches_to_cochesMostrar, datos);
         });
 

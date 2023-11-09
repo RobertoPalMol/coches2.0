@@ -76,7 +76,6 @@ public class CocheAdapter extends ArrayAdapter<Coche> {
 
         binding.idCoche.setText(coches.getCoche());
         binding.precioCoche.setText("Precio: "+coches.getPrecio());
-        binding.idCoche.setText(coches.getCoche());
 
 
 

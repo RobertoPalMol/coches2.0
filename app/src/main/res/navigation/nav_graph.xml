@@ -34,7 +34,7 @@
         tools:layout="@layout/coches_motrar">
 
         <action
-            android:id="@+id/action_cochesRow_to_lista_coches"
+            android:id="@+id/action_cochesMostrar_to_lista_coches"
             app:destination="@id/lista_coches" />
     </fragment>
 
