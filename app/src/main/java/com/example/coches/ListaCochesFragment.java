@@ -39,11 +39,6 @@ public class ListaCochesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        String[] data = {//Introducir datos de coches
-
-        };
-
-
         adapter = new cocheAdapter(
                 getContext(), // Context de l'Activity
                 R.layout.coches_row, // Layout per a cadascun dels ítems del ListView
@@ -71,7 +66,6 @@ public class ListaCochesFragment extends Fragment {
             });
         });
     }
-
 
 
     @Override
