@@ -1,4 +1,4 @@
-package com.example.coches;
+package com.example.coches.Api;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
+import com.example.coches.R;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class cocheAdapter extends ArrayAdapter<Coche> {

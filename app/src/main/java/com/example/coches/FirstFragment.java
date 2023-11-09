@@ -53,23 +53,13 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // Maneja el clic del botón "Coches disponibles"
-                showCochesDisponiblesFragment();
 
-                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_ListaCoches);
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_lista_coches);
             }
         });
     }
 
-    private void showCochesDisponiblesFragment() {
-        // Crea un nuevo fragmento para los coches disponibles
-        cochesApi cochesDisponiblesFragment = new cochesApi();
 
-        // Reemplaza el fragmento actual con el nuevo fragmento
-        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.lista_coches, cochesDisponiblesFragment);
-        transaction.addToBackStack(null); // Opcional: Agrega la transacción a la pila de retroceso
-        transaction.commit();
-    }
 
     @Override
     public void onDestroyView() {

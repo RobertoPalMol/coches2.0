@@ -11,17 +11,17 @@
         tools:layout="@layout/fragment_first">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_FirstFragment_to_lista_coches"
             app:destination="@id/lista_coches" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.coches.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/lista_coches"
+        android:name="com.example.coches.ListaCochesFragment"
+        android:label="@string/lista_coches_label"
+        tools:layout="@layout/lista_coches">
 
         <action
-            android:id="@+id/action_FirstFragment_to_ListaCoches"
+            android:id="@+id/lista_coches_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
