@@ -76,9 +76,6 @@ public class CocheAdapter extends ArrayAdapter<Coche> {
 
         binding.idCoche.setText(coches.getCoche());
         binding.precioCoche.setText("Precio: "+coches.getPrecio());
-        //binding.tiendaCoche.setText("Tienda de compra: "+coches.getTienda());
-        //binding.velocidadCoche.setInt("Velocidad maxima: "+coches.getVelocidad()+"(km/h)");
-        //binding.imagenCoche.setImage(coches.getImagen());
 
 
 

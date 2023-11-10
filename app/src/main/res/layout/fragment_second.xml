@@ -1,13 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"/>
-</androidx.core.widget.NestedScrollView>
+    <ImageView
+        android:id="@+id/imagenCoche"
+        android:layout_width="379dp"
+        android:layout_height="318dp"
+        android:layout_marginTop="124dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/precioCoche"
+        android:layout_width="295dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="@+id/idCoche"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/idCoche"
+        app:layout_constraintTop_toBottomOf="@+id/imagenCoche" />
+
+    <TextView
+        android:id="@+id/tiendaId"
+        android:layout_width="301dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/precioCoche"
+        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintStart_toStartOf="@+id/precioCoche" />
+
+    <TextView
+        android:id="@+id/idCoche"
+        android:layout_width="324dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/velocidadId"
+        android:layout_width="300dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/tiendaId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tiendaId"
+        app:layout_constraintTop_toBottomOf="@+id/tiendaId" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

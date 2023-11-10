@@ -60,7 +60,7 @@ public class ListaCochesFragment extends Fragment {
             datos.putSerializable("Coche", coche);
 
             Log.d("tanga", "envia?");
-            NavHostFragment.findNavController(this).navigate(R.id.action_lista_coches_to_cochesMostrar, datos);
+            NavHostFragment.findNavController(this).navigate(R.id.action_lista_coches_to_fragment_second, datos);
         });
 
     }

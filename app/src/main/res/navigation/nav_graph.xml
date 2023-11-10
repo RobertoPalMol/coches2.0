@@ -24,17 +24,17 @@
             android:id="@+id/lista_coches_to_FirstFragment"
             app:destination="@id/FirstFragment" />
         <action
-            android:id="@+id/action_lista_coches_to_cochesMostrar"
-            app:destination="@id/cochesMostrar" />
+            android:id="@+id/action_lista_coches_to_fragment_second"
+            app:destination="@id/fragmentsecond" />
 
     </fragment>
     <fragment
-        android:id="@+id/cochesMostrar"
+        android:id="@+id/fragmentsecond"
         android:name="com.example.coches.SecondFragment"
-        tools:layout="@layout/coches_motrar">
+        tools:layout="@layout/fragment_second">
 
         <action
-            android:id="@+id/action_cochesMostrar_to_lista_coches"
+            android:id="@+id/action_fragment_second_to_lista_coches"
             app:destination="@id/lista_coches" />
     </fragment>
 

@@ -1,6 +1,7 @@
 package com.example.coches;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +25,8 @@ import java.util.ArrayList;
 
 public class SecondFragment extends Fragment {
     private FragmentSecondBinding binding;
-    private CocheAdapter adapter;
+
+    private ImageView imageView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,16 +37,29 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Crear instancia de la clase API
-        cochesApi api = new cochesApi();
-        ArrayList<Coche> cochesList = api.getCoches();
+        imageView = view.findViewById(R.id.imagenCoche);
 
-        // Inicializar el adaptador con la lista de coches
-        adapter = new CocheAdapter(requireContext(), R.layout.lista_coches, cochesList);
+        Bundle args = getArguments();
+        if(args != null) {
 
-        // Configurar el RecyclerView
-        //binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
-        //binding.recyclerView.setAdapter(adapter);
+            Coche item = (Coche) args.getSerializable("Coche");
+
+            if (item != null) {
+                refrescarInterfaz(item);
+            }
+        }
+    }
+    @SuppressLint("SetTextI18n")
+    private void refrescarInterfaz(Coche item) {
+
+        binding.idCoche.setText("Modelo de coche: " + item.getCoche());
+        binding.precioCoche.setText("Precio de venta: " + item.getPrecio());
+        binding.tiendaId.setText("Tienda de venta: " + item.getTienda());
+        binding.velocidadId.setText("Velocidad: " + item.getVelocidad()+" (km/h)");
+        binding.tiendaId.setText("Tienda de venta: " + item.getTienda());
+        Picasso.get().load(item.getImagen()).into(imageView);//no va la foto :,(
+
+
     }
 
     @Override
