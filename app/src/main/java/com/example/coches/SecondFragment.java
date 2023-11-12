@@ -52,11 +52,10 @@ public class SecondFragment extends Fragment {
     @SuppressLint("SetTextI18n")
     private void refrescarInterfaz(Coche item) {
 
-        binding.idCoche.setText("Modelo de coche: " + item.getCoche());
-        binding.precioCoche.setText("Precio de venta: " + item.getPrecio());
-        binding.tiendaId.setText("Tienda de venta: " + item.getTienda());
-        binding.velocidadId.setText("Velocidad: " + item.getVelocidad()+" (km/h)");
-        binding.tiendaId.setText("Tienda de venta: " + item.getTienda());
+        binding.idCoche.setText("MODELO DE COCHE: \n" + item.getCoche());
+        binding.precioCoche.setText("PRECIO DE VENTA: " + item.getPrecio());
+        binding.tiendaId.setText("TIENDA DE VENTA:  \n" + item.getTienda());
+        binding.velocidadId.setText("VELOCIDAD MAXIMA: " + item.getVelocidad()+" (km/h)");
         Picasso.get().load(item.getImagen()).into(imageView);//no va la foto :,(
 
 

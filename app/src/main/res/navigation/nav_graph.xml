@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_lista_coches"
             app:destination="@id/lista_coches" />
+        <action
+            android:id="@+id/action_FirstFragment_to_fragmentsecond"
+            app:destination="@id/fragmentsecond" />
     </fragment>
     <fragment
         android:id="@+id/lista_coches"
