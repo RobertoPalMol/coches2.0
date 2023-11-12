@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+ */
 
     @Override
     public boolean onSupportNavigateUp() {

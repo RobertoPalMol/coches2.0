@@ -8,6 +8,7 @@
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.coches.FirstFragment"
+        android:label="Buscador coches GTA V"
         tools:layout="@layout/fragment_first">
 
         <action
@@ -34,6 +35,7 @@
     <fragment
         android:id="@+id/fragmentsecond"
         android:name="com.example.coches.SecondFragment"
+        android:label="Coches"
         tools:layout="@layout/fragment_second">
 
         <action
