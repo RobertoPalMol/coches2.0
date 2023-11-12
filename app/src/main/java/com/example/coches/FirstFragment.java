@@ -65,12 +65,13 @@ public class FirstFragment extends Fragment {
 
 
                 }
-
+ */
                 // No funciona
 
                 String searchTerm = textoBuscar.getText().toString();
-                Toast.makeText(getActivity(), "Buscando: " + searchTerm, Toast.LENGTH_SHORT).show();
- */
+                //Toast.makeText(getActivity(), "Buscando: " + searchTerm, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Esta función no esta disponible", Toast.LENGTH_SHORT).show();
+
             }
         });
         cochesList.setOnClickListener(new View.OnClickListener() {
@@ -96,7 +97,6 @@ public class FirstFragment extends Fragment {
 
             if (listaCompleta != null) {
                 for (Coche coche : listaCompleta) {
-                    // Realizar la lógica de búsqueda según tus criterios
                     if (coche.getCoche().toLowerCase().contains(searchTerm.toLowerCase())
                             || coche.getCoche().toLowerCase().contains(searchTerm.toLowerCase())) {
                         listaFiltrada.add(coche);

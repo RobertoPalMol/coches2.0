@@ -33,9 +33,9 @@
 
     <TextView
         android:id="@+id/tiendaId"
-        android:layout_width="320dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="228dp"
+        android:layout_width="329dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="216dp"
         android:fontFamily="@font/pricedow"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,8 +45,8 @@
 
     <TextView
         android:id="@+id/idCoche"
-        android:layout_width="335dp"
-        android:layout_height="65dp"
+        android:layout_width="340dp"
+        android:layout_height="78dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/pricedow"
         android:textSize="34sp"
