@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/custom">
+    android:background="@drawable/custom2">
 
 
     <ImageView
@@ -22,12 +22,12 @@
         android:id="@+id/precioCoche"
         android:layout_width="313dp"
         android:layout_height="56dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="124dp"
         android:fontFamily="@font/pricedow"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/tiendaId"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tiendaId"
         app:layout_constraintTop_toTopOf="@+id/idCoche" />
 
@@ -63,14 +63,14 @@
         android:id="@+id/velocidadId"
         android:layout_width="313dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/pricedow"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/precioCoche"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/precioCoche"
-        app:layout_constraintTop_toBottomOf="@+id/precioCoche" />
+        app:layout_constraintTop_toBottomOf="@+id/idCoche" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
