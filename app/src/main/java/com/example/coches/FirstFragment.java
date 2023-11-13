@@ -23,7 +23,8 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class FirstFragment extends Fragment {
+public class
+FirstFragment extends Fragment {
 
     private FragmentFirstBinding binding;
 
