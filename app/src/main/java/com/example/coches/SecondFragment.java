@@ -2,6 +2,7 @@ package com.example.coches;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,26 +13,38 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.coches.Api.Coche;
 import com.example.coches.Api.CocheAdapter;
 import com.example.coches.Api.cochesApi;
+import com.example.coches.BD.cochesViewModel;
+import com.example.coches.databinding.FragmentFirstBinding;
 import com.example.coches.databinding.FragmentSecondBinding;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SecondFragment extends Fragment {
     private FragmentSecondBinding binding;
+    private List<Coche> items;
+    private CocheAdapter adapter;
 
     private ImageView imageView;
+    private cochesViewModel model;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentSecondBinding.inflate(inflater, container, false);
         return binding.getRoot();
+    }
+
+    private void refresh() {
+        model.reload();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

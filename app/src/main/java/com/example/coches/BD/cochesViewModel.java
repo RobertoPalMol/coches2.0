@@ -1,7 +1,7 @@
 package com.example.coches.BD;
 
 //ESTA CLASE NO VA
-/*
+
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -19,24 +19,23 @@ import java.util.List;
 public class cochesViewModel extends AndroidViewModel {
         private final Application app;
         private final AppDatabase appDatabase;
-        private final cocheDao movieDao;
-        private LiveData<List<Coche>> coches;
+        private final cocheDao cocheDao;
 
         public cochesViewModel(Application application) {
             super(application);
 
             this.app = application;
             this.appDatabase = AppDatabase.getDatabase(
-                    this.getApplication());                    (1)
-            this.movieDao = appDatabase.getCocheDao();     (2)
+                    this.getApplication());
+            this.cocheDao = appDatabase.getCocheDao();
         }
 
         public LiveData<List<Coche>> getCoches() {
-            return movieDao.getCoches();                   (3)
+            return cocheDao.getCoches();
         }
 
 
-        public void reload() {                             (4)
+        public void reload() {
             // do async operation to fetch users
             RefreshDataTask task = new RefreshDataTask();
             task.execute();
@@ -49,18 +48,14 @@ public class cochesViewModel extends AndroidViewModel {
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(
                         app.getApplicationContext()
                 );
-                String pais = preferences.getString("pais", "es");
-                String tipusConsulta = preferences.getString(
-                        "tipus_consulta", "vistes"
-                );
 
                 cochesApi api = new cochesApi();
                 ArrayList<Coche> result;
                     result = api.getCoches();
 
 
-                movieDao.deleteCoches();                    (5)
-                movieDao.addCoches(result);                 (6)
+                cocheDao.deleteCoches();
+                cocheDao.addCoches(result);
 
                 return null;
             }
@@ -69,7 +64,7 @@ public class cochesViewModel extends AndroidViewModel {
 
     }
 
- */
+
 
 
 
