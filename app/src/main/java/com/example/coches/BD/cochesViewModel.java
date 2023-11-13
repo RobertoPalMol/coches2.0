@@ -20,7 +20,7 @@ public class cochesViewModel extends AndroidViewModel {
         private final Application app;
         private final AppDatabase appDatabase;
         private final cocheDao movieDao;
-        private LiveData<List<Coche>> movies;
+        private LiveData<List<Coche>> coches;
 
         public cochesViewModel(Application application) {
             super(application);
@@ -31,7 +31,7 @@ public class cochesViewModel extends AndroidViewModel {
             this.movieDao = appDatabase.getCocheDao();     (2)
         }
 
-        public LiveData<List<Coche>> getMovies() {
+        public LiveData<List<Coche>> getCoches() {
             return movieDao.getCoches();                   (3)
         }
 
@@ -68,6 +68,8 @@ public class cochesViewModel extends AndroidViewModel {
         }
 
     }
-}
 
  */
+
+
+

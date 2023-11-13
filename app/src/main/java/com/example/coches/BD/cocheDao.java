@@ -1,8 +1,6 @@
 package com.example.coches.BD;
 
 
-//ESTA CLASE NO VA
-/*
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -14,8 +12,8 @@ import com.example.coches.Api.Coche;
 import java.util.List;
 
 @Dao
-public class cocheDao {
-    @Query("select * from coche")
+public interface cocheDao {
+    @Query("select * from Coche")
     LiveData<List<Coche>> getCoches();
 
     @Insert
@@ -27,11 +25,7 @@ public class cocheDao {
     @Delete
     void deleteCoche(Coche coche);
 
-    @Query("DELETE FROM coche")
+    @Query("DELETE FROM Coche")
     void deleteCoches();
 
 }
-
- */
-
-
