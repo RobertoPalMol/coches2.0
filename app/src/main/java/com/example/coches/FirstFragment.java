@@ -47,8 +47,10 @@ FirstFragment extends Fragment {
         EditText textoBuscar = view.findViewById(R.id.textoBuscar);
         Button botonBuscar = view.findViewById(R.id.botonBuscar);
         Button cochesList = view.findViewById(R.id.cochesList);
+
         //Image random novetat
-        int num = new Random().nextInt((4-1)+1)+1;                Log.d("fotitos sexys", ""+num);
+        int num = new Random().nextInt((4-1)+1)+1;
+        Log.d("fotitos sexys", ""+num);
 
         switch (num){
             case 1:
