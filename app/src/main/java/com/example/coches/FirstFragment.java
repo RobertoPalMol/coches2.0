@@ -3,6 +3,7 @@ package com.example.coches;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +19,10 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.example.coches.Api.Coche;
 import com.example.coches.Api.cochesApi;
 import com.example.coches.databinding.FragmentFirstBinding;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -44,6 +47,25 @@ FirstFragment extends Fragment {
         EditText textoBuscar = view.findViewById(R.id.textoBuscar);
         Button botonBuscar = view.findViewById(R.id.botonBuscar);
         Button cochesList = view.findViewById(R.id.cochesList);
+        //Image random novetat
+        int num = new Random().nextInt((4-1)+1)+1;                Log.d("fotitos sexys", ""+num);
+
+        switch (num){
+            case 1:
+                Picasso.get().load(R.drawable.novedad1).into(binding.novedad);
+                break;
+            case 2:
+                Picasso.get().load(R.drawable.novedad2).into(binding.novedad);
+                break;
+            case 3:
+                Picasso.get().load(R.drawable.novedad3).into(binding.novedad);
+                break;
+            case 4:
+                Picasso.get().load(R.drawable.novedad4).into(binding.novedad);
+                break;
+            default:
+                Log.d("fotitos sexys", ""+num);
+        }
 
         String searchTerm = textoBuscar.getText().toString();
         botonBuscar.setOnClickListener(new View.OnClickListener() {

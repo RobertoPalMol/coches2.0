@@ -12,39 +12,6 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
-        <ImageView
-            android:id="@+id/novedad2"
-            android:layout_width="171dp"
-            android:layout_height="155dp"
-            android:src="@drawable/novedad2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.028"
-            app:layout_constraintStart_toEndOf="@+id/novedad1"
-            app:layout_constraintTop_toTopOf="@+id/novedad1"
-            tools:src="@drawable/novedad2" />
-
-        <ImageView
-            android:id="@+id/novedad3"
-            android:layout_width="171dp"
-            android:layout_height="155dp"
-            android:src="@drawable/novedad3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            tools:src="@drawable/novedad3" />
-
-        <ImageView
-            android:id="@+id/novedad4"
-            android:layout_width="171dp"
-            android:layout_height="155dp"
-            android:src="@drawable/novedad4"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/textView"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/novedad3"
-            app:layout_constraintTop_toBottomOf="@+id/novedad2"
-            app:layout_constraintVertical_bias="1.0"
-            tools:src="@drawable/novedad4" />
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textoBuscar"
             android:layout_width="359dp"
@@ -104,12 +71,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/novedad1"
-            android:layout_width="171dp"
-            android:layout_height="155dp"
+            android:id="@+id/novedad"
+            android:layout_width="344dp"
+            android:layout_height="280dp"
             android:layout_marginTop="67dp"
-            android:src="@drawable/novedad1"
-            app:layout_constraintBottom_toTopOf="@+id/novedad3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textView"
