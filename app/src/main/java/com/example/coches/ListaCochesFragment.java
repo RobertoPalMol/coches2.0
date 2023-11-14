@@ -1,5 +1,6 @@
 package com.example.coches;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -10,11 +11,13 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.coches.Api.Coche;
 import com.example.coches.Api.CocheAdapter;
 import com.example.coches.Api.cochesApi;
+import com.example.coches.BD.cochesViewModel;
 import com.example.coches.databinding.ListaCochesBinding;
 
 import java.util.ArrayList;
@@ -27,6 +30,8 @@ public class ListaCochesFragment extends Fragment {
 
     private ListaCochesBinding binding;
     private CocheAdapter adapter;
+    private cochesViewModel model;
+    /*
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -37,6 +42,8 @@ public class ListaCochesFragment extends Fragment {
         return binding.getRoot();
 
     }
+
+     */
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -86,6 +93,33 @@ public class ListaCochesFragment extends Fragment {
                 }
             });
         });
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        binding = ListaCochesBinding.inflate(inflater);
+        View view = binding.getRoot();
+
+        ArrayList<Coche> items = new ArrayList<>();
+        adapter = new CocheAdapter(
+                getContext(),
+                R.layout.coches_row,
+                items
+        );
+
+        binding.listaID.setAdapter(adapter);
+        binding.listaID.setOnItemClickListener((adapterView, view1, i, l) -> {
+            Coche coche = (Coche) adapterView.getItemAtPosition(i);
+        });
+
+        model = new ViewModelProvider(this).get(cochesViewModel.class);
+        model.getCoches().observe(getViewLifecycleOwner(), coches -> {
+            adapter.clear();
+            adapter.addAll(coches);
+        });
+
+        return view;
     }
 
 

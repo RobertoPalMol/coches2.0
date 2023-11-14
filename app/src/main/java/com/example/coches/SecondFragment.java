@@ -7,21 +7,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.coches.Api.Coche;
 import com.example.coches.Api.CocheAdapter;
-import com.example.coches.Api.cochesApi;
 import com.example.coches.BD.cochesViewModel;
-import com.example.coches.databinding.FragmentFirstBinding;
 import com.example.coches.databinding.FragmentSecondBinding;
 import com.squareup.picasso.Picasso;
 
@@ -30,11 +24,7 @@ import java.util.List;
 
 public class SecondFragment extends Fragment {
     private FragmentSecondBinding binding;
-    private List<Coche> items;
-    private CocheAdapter adapter;
-
     private ImageView imageView;
-    private cochesViewModel model;
 
 
     @Override
@@ -43,9 +33,7 @@ public class SecondFragment extends Fragment {
         return binding.getRoot();
     }
 
-    private void refresh() {
-        model.reload();
-    }
+
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -62,6 +50,7 @@ public class SecondFragment extends Fragment {
             }
         }
     }
+
     @SuppressLint("SetTextI18n")
     private void refrescarInterfaz(Coche item) {
 
