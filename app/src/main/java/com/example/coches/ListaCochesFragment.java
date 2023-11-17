@@ -31,19 +31,7 @@ public class ListaCochesFragment extends Fragment {
     private ListaCochesBinding binding;
     private CocheAdapter adapter;
     private cochesViewModel model;
-    /*
-    @Override
-    public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
 
-        binding = ListaCochesBinding.inflate(inflater, container, false); // Carga la definición de la interficie
-        return binding.getRoot();
-
-    }
-
-     */
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

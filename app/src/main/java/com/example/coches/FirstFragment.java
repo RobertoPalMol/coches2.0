@@ -74,6 +74,8 @@ FirstFragment extends Fragment {
             @Override
             public void onClick(View v) {
 /*
+
+                // No funciona, dejado para futuros proyectos
                 if (!searchTerm.isEmpty()) {
                     buscarCoches(searchTerm);
                 } else {
@@ -91,7 +93,7 @@ FirstFragment extends Fragment {
 
                 }
  */
-                // No funciona
+
 
                 String searchTerm = textoBuscar.getText().toString();
                 //Toast.makeText(getActivity(), "Buscando: " + searchTerm, Toast.LENGTH_SHORT).show();
